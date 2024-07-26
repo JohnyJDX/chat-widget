@@ -1,0 +1,125 @@
+.chat-widget {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.chat-content {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #cbd5e1;
+  height: 600px;
+  z-index: 1;
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 15px;
+  transition: opacity, transform 0.5s ease;
+}
+
+.chat-content.closed {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.chat-content.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.chat-toggle {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: #007bff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #f1f0f0;
+  padding: 25px;
+}
+
+.chat-bubble {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  max-width: max-content;
+  border: #000 solid 1px;
+}
+
+.chat-bubble.button {
+  cursor: pointer;
+}
+
+.chat-bubble.sent {
+  background: #007bff;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.chat-bubble.received {
+  background: #f1f0f0;
+  color: #000;
+  align-self: flex-start;
+}
+
+.chat-input {
+  display: flex;
+  gap: 15px;
+}
+
+.chat-input input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chat-input button {
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #0069d9;
+}
+
+.options {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+}
